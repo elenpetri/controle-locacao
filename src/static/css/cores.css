@@ -1,0 +1,6 @@
+@charset "UTF-8";
+:root{
+    --corbase: #00b2ca;/*Cor principal da paleta*/
+    --corsecundaria: #FF8600; /*Cor de contraste*/
+    --corterciaria: #084B83;
+}

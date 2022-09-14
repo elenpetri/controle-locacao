@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início</title>
+
+    <link rel="stylesheet" href="../static/css/cores.css">
+    <link rel="stylesheet" href="../static/css/header.css">
+    <link rel="stylesheet" href="../static/css/body.css">
+
+    <link rel="stylesheet" href="../static/bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/bootstrap-icons-1.8.3/bootstrap-icons.css">
+</head>
+
+<body>
+    <div class="cabecalho">
+        <header class="d-flex flex-wrap py-3 mb-4">
+            <span class="ms-4">Contratos</span>
+            </a>
+        </header>
+    </div>
+    <div class="m-4">
+        <div id="pesquisar" class="mb-4 input-group flex-nowrap">
+            <span class="input-group-text" id="addon-wrapping">
+                <i class="bi bi-search"></i>
+            </span>
+            <input type="text" class="form-control" placeholder="Pesquisar" aria-label="Pesquisar"
+                aria-describedby="addon-wrapping">
+        </div>
+
+        <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist" onclick="alterarcorbr()">
+                <button class="nav-link active" id="nav-novo-contrato-tab" data-bs-toggle="tab"
+                    data-bs-target="#nav-novo-contrato" type="button" role="tab" aria-controls="nav-novo-contrato"
+                    aria-selected="true"> <i class="bi bi-plus-circle-fill"></i> NOVO CONTRATO</button>
+                <button class="nav-link" id="nav-ativos-tab" data-bs-toggle="tab" data-bs-target="#nav-ativos"
+                    type="button" role="tab" aria-controls="nav-ativos" aria-selected="false">ATIVOS</button>
+                <button class="nav-link" id="nav-inativos-tab" data-bs-toggle="tab" data-bs-target="#nav-inativos"
+                    type="button" role="tab" aria-controls="nav-inativos" aria-selected="false">INATIVOS</button>
+            </div>
+        </nav>
+        <div class="tab-content m-lg-5 m-4" id="nav-tabContent">
+            <nav class="tab-pane fade show active" id="nav-novo-contrato" role="tabpanel"
+                aria-labelledby="nav-novo-contrato-tab" tabindex="0">
+
+                <!--FORMULÁRIO Informações do Contratante -->
+                <div id="CadastroContratante">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="nomeCompleto" placeholder="Nome Completo">
+                        <label for="floatingInput">Nome Completo</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input oninput="mascaraCpf(this)" type="text" class="form-control" id="cpf" placeholder="CPF">
+                        <label for="floatingInput">CPF</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="rg" placeholder="RG">
+                        <label for="floatingInput">RG</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="Endereco" placeholder="Endereço">
+                        <label for="floatingInput">Endereço</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" name="telefone" id="telefone" placeholder="Telefone"
+                            maxlength="15" />
+                        <label for="floatingInput">Telefone</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" name="telefone" id="telefone" placeholder="Telefone 2"
+                            maxlength="15" />
+                        <label for="floatingInput">Telefone 2</label>
+                    </div>
+                </div>
+                <!--FORMULÁRIO Informações do Contrato-->
+                <div id="CadastroContrato">
+                    <form class="needs-validation" novalidate="">
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <div class="form-floating mb-3">
+                                    <input type="date" class="form-control" name="dataEntrada" id="dataEntrada"
+                                        placeholder="Data de Entrada" value="" required="" />
+                                    <label for="floatingInput"><i class="bi bi-calendar"></i> Data de Entrada</label>
+                                    <div class="invalid-feedback">
+                                        Valid last name is required.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="form-floating mb-3">
+                                    <input type="time" class="form-control" name="horarioEntrada" id="horarioEntrada"
+                                        placeholder="Horário de Entrada" value="" required="" />
+                                    <label for="floatingInput"><i class="bi bi-clock"></i></i> Horário de
+                                        Entrada</label>
+                                    <div class="invalid-feedback">
+                                        Valid last name is required.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <div class="form-floating mb-3">
+                                    <input type="date" class="form-control" name="dataSaida" id="dataSaida"
+                                        placeholder="Data de Saída" value="" required="" />
+                                    <label for="floatingInput"><i class="bi bi-calendar"></i> Data de Saída</label>
+                                    <div class="invalid-feedback">
+                                        Valid last name is required.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="form-floating mb-3">
+                                    <input type="time" class="form-control" name="horarioSaida" id="horarioSaida"
+                                        placeholder="Horário de Saída" value="" required="" />
+                                    <label for="floatingInput"><i class="bi bi-clock"></i></i> Horário de Saída</label>
+                                    <div class="invalid-feedback">
+                                        Valid last name is required.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control valorMonetario" placeholder="Valor Total Locação"
+                                maxlength="9" id="valorLocacao" onkeyup="formatarMoeda()">
+                            <label for="floatingInput"><i class="bi bi-currency-dollar"></i> Valor Total Locação
+                            </label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control valorMonetario" placeholder="Valor Locação Diária"
+                                maxlength="9" id="valorLocacaoDiaria" onkeyup="formatarMoeda()">
+                            <label for="floatingInput"><i class="bi bi-currency-dollar"></i> Valor Locação
+                                Diária</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control valorMonetario" placeholder="Valor Entrada"
+                                maxlength="9" id="valorEntrada" onkeyup="formatarMoeda()">
+                            <label for="floatingInput"><i class="bi bi-piggy-bank"></i> Valor Entrada</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control valorMonetario" placeholder="Saldo Devedor"
+                                maxlength="9" id="saldoDevedor" onkeyup="formatarMoeda()">
+                            <label for="floatingInput"><i class="bi bi-cash-coin"></i> Saldo Devedor</label>
+                        </div>
+
+                        <select class="form-select" aria-label="Default select example" required>
+                            <option selected><i class="bi bi-bank"></i> Formas de Pagamento</option>
+                            <option value="1">Pix</option>
+                            <option value="2">TED</option>
+                            <option value="3">DOC</option>
+                            <option value="3">Dinheiro</option>
+                        </select>
+
+                        <div class="d-grid gap-2 d-md-block text-end mt-4">
+                            <button class="btn btn-proximo" type="button">Próximo</button>
+                            <button class="btn btn-proximo" type="button">Salvar</button>
+                            <button class="btn btn-cancelar" type="button">Cancelar</button>
+                        </div>
+                    </form>
+                </div>
+            </nav>
+            <!--ATIVOS-->
+            <div class="tab-pane fade" id="nav-ativos" role="tabpanel" aria-labelledby="nav-ativos-tab" tabindex="0">
+                <div class="bd-example">
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td><i class="bi bi-person"></i> Élen Petri</td>
+                                <td><i class="bi bi-calendar"></i> 22/08/20222 8:00<br>22/08/2022 17:00 </td>
+                                <td class="btn-acoes">
+                                    <button type="button" data-usuario="{{membro[0]}}" data-bs-toggle="modal"
+                                        data-bs-target="#excluirModal" title="Visualizar contrato">
+                                        <i class="bi bi-eye-fill"></i>
+                                    </button>
+
+                                    <button type="button" data-usuario="{{membro[0]}}" data-bs-toggle="modal"
+                                        data-bs-target="#excluirModal" title="Excluir contrato">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+
+                                    <button type="button" data-usuario="{{membro[0]}}" data-bs-toggle="modal"
+                                        data-bs-target="#excluirModal" title="Finalizar contrato">
+                                        <i class="bi bi-check-square-fill"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td><i class="bi bi-person"></i> Élen Petri</td>
+                                <td><i class="bi bi-calendar"></i> 22/08/20222 8:00<br>22/08/2022 17:00 </td>
+                                <td class="btn-acoes">
+                                    <button type="button" data-usuario="{{membro[0]}}" data-bs-toggle="modal"
+                                        data-bs-target="#excluirModal" title="Visualizar contrato">
+                                        <i class="bi bi-eye-fill"></i>
+                                    </button>
+
+                                    <button type="button" data-usuario="{{membro[0]}}" data-bs-toggle="modal"
+                                        data-bs-target="#excluirModal" title="Excluir contrato">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+
+                                    <button type="button" data-usuario="{{membro[0]}}" data-bs-toggle="modal"
+                                        data-bs-target="#excluirModal" title="Finalizar contrato">
+                                        <i class="bi bi-check-square-fill"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td><i class="bi bi-person"></i> Élen Petri</td>
+                                <td><i class="bi bi-calendar"></i> 22/08/20222 8:00<br>22/08/2022 17:00 </td>
+                                <td class="btn-acoes">
+                                    <button type="button" data-usuario="{{membro[0]}}" data-bs-toggle="modal"
+                                        data-bs-target="#excluirModal" title="Visualizar contrato">
+                                        <i class="bi bi-eye-fill"></i>
+                                    </button>
+
+                                    <button type="button" data-usuario="{{membro[0]}}" data-bs-toggle="modal"
+                                        data-bs-target="#excluirModal" title="Excluir contrato">
+                                        <i class="bi bi-trash"></i>
+                                    </button>
+
+                                    <button type="button" data-usuario="{{membro[0]}}" data-bs-toggle="modal"
+                                        data-bs-target="#excluirModal" title="Finalizar contrato">
+                                        <i class="bi bi-check-square-fill"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="nav-inativos" role="tabpanel" aria-labelledby="nav-inativos-tab"
+                tabindex="0">
+                ...
+            </div>
+
+
+        </div>
+
+        <script src="../static/js/script.js"></script>
+        <script src="../static/bootstrap-5.2.0-beta1-dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

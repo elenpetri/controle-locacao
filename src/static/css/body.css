@@ -1,0 +1,42 @@
+#pesquisar {
+    max-width: 50%;
+}
+
+/*CONTRATO ATIVO*/
+
+.bi-plus-circle-fill, .bi-person, .bi-calendar, .bi-eye-fill, .bi-trash, .bi-clock, .bi-currency-dollar, .bi-piggy-bank, .bi-cash-coin, .bi-bank {
+    width: 64px;
+    color: var(--corsecundaria);    
+}
+
+.btn-acoes > button {
+    border: none;
+    align-items: center;
+}
+
+/*NOVO CONTRATO*/
+#CadastroContratante {
+    
+}
+
+button.btn-proximo, button.btn-cancelar {
+    font: bolder 12pt Arial;
+}
+
+button.btn-proximo {
+    background-color: var(--corterciaria);
+    color: white;
+}
+
+button.btn-proximo:hover {
+    color: var(--corterciaria);
+}
+
+button.btn-cancelar {
+    background-color: var(--corsecundaria);
+    color: white;
+}
+
+button.btn-cancelar:hover {
+    color: var(--corsecundaria);
+}

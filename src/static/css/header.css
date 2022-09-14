@@ -1,0 +1,9 @@
+.cabecalho{
+    background: var(--corbase);
+    height: 5rem;
+}
+
+.cabecalho > header > span{
+    color: white;
+    font: normal 32px Verdana;
+}
