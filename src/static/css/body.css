@@ -5,13 +5,14 @@
 /*CONTRATO ATIVO*/
 
 .bi-plus-circle-fill, .bi-person, .bi-calendar, .bi-eye-fill, .bi-trash, .bi-clock, .bi-currency-dollar, .bi-piggy-bank, .bi-cash-coin, .bi-bank {
-    width: 64px;
+    font-size: 1.125rem;
     color: var(--corsecundaria);    
 }
 
 .btn-acoes > button {
     border: none;
     align-items: center;
+    background: none;
 }
 
 /*NOVO CONTRATO*/
