@@ -4,16 +4,29 @@
 
 /*CONTRATO ATIVO*/
 
+/*Padrão icons*/
 .bi-plus-circle-fill, .bi-person, .bi-calendar, .bi-eye-fill, .bi-trash, .bi-clock, .bi-currency-dollar, .bi-piggy-bank, .bi-cash-coin, .bi-bank {
     font-size: 1.125rem;
     color: var(--corsecundaria);    
 }
 
+/*botões de visualizar, excluir e finalizar contratos*/
 .btn-acoes > button {
     border: none;
     align-items: center;
     background: none;
 }
+
+/*modal excluir contrato*/
+.bi-exclamation-triangle-fill {
+    color: red;
+}
+
+.modal-body {
+    font: bold 16px Arial;
+}
+
+
 
 /*NOVO CONTRATO*/
 #CadastroContratante {
